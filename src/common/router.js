@@ -72,6 +72,24 @@ export const getRouterData = app => {
     '/': {
       component: dynamicWrapper(app, ['user', 'login'], () => import('../layouts/BasicLayout')),
     },
+    '/apply': {
+      component: dynamicWrapper(app, [], () => import('../routes/User/Apply')),
+    },
+    '/training-club': {
+      component: dynamicWrapper(app, [], () => import('../routes/TrainingClub/TrainingClub')),
+    },
+    '/task-card/task-card': {
+      component: dynamicWrapper(app, [], () => import('../routes/TaskCard/TaskCard')),
+    },
+    '/task-card/test': {
+      component: dynamicWrapper(app, [], () => import('../routes/TaskCard/Test')),
+    },
+    '/task-card/test-result': {
+      component: dynamicWrapper(app, [], () => import('../routes/TaskCard/TestResult')),
+    },
+    '/task-card/score': {
+      component: dynamicWrapper(app, [], () => import('../routes/TaskCard/Score')),
+    },
     // '/dashboard/analysis': {
     //   component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
     // },
