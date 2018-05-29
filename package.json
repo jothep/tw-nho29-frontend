@@ -20,7 +20,8 @@
     "test:all": "node ./tests/run-tests.js",
     "prettier": "prettier --write ./src/**/**/**/*",
     "dockerize": "cp -r ./dist ./docker/; docker build -t tw-nho29-frontend ./docker",
-    "start:docker": "docker run --detach --name tw-nho29-frontend --publish 8001:80 tw-nho29-frontend"
+    "start:docker": "docker run --detach --name tw-nho29-frontend --publish 8001:80 tw-nho29-frontend",
+    "stop:docker": "docker stop tw-nho29-frontend && docker rm tw-nho29-frontend"
   },
   "dependencies": {
     "@antv/data-set": "^0.8.0",
