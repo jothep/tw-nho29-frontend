@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Icon } from 'antd';
+import { Layout } from 'antd';
 import DocumentTitle from 'react-document-title';
 import { connect } from 'dva';
 import { Route, Redirect, Switch } from 'dva/router';
@@ -8,13 +8,12 @@ import { ContainerQuery } from 'react-container-query';
 import classNames from 'classnames';
 import pathToRegexp from 'path-to-regexp';
 import { unenquireScreen } from 'enquire-js';
-import GlobalFooter from '../components/GlobalFooter';
 import NotFound from '../routes/Exception/404';
 import { getRoutes } from '../utils/utils';
 import Authorized from '../utils/Authorized';
 import { getMenuData } from '../common/menu';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 const { AuthorizedRoute, check } = Authorized;
 
 /**
